@@ -2,44 +2,51 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".BaseAppliction"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".MainActivity3">
+        <activity android:name=".basefragment.MainActivity8">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity3">
+
+        </activity>
         <activity android:name=".notiy.toast.MainActivity5" />
-        <activity android:name=".notiy.toast.MainActivity4"></activity>
+        <activity android:name=".notiy.toast.MainActivity4" />
         <activity android:name=".notiy.OtherActivity" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".notiy.MainActivity3" />
-        <activity android:name=".notiy.badgeview.ui.MainActivity6"></activity>
+        <activity android:name=".notiy.badgeview.ui.MainActivity6" />
         <activity android:name=".notiy.badgeview.ui.ListViewActivity" />
         <activity android:name=".notiy.badgeview.ui.RecyclerViewActivity" />
 
         <receiver android:name=".timerappwidget.NotificationReceiver">
             <intent-filter>
-                <action android:name="org.wangchenlong.timerappwidget.action.NOTIFICATION_STATE"/>
-                <action android:name="org.wangchenlong.timerappwidget.action.CHANGE_STATE"/>
+                <action android:name="org.wangchenlong.timerappwidget.action.NOTIFICATION_STATE" />
+                <action android:name="org.wangchenlong.timerappwidget.action.CHANGE_STATE" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".timerappwidget.TimerAppWidget">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-                <action android:name="org.wangchenlong.timerappwidget.action.CHANGE_STATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="org.wangchenlong.timerappwidget.action.CHANGE_STATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/timer_widget_provider"/>
+                android:resource="@xml/timer_widget_provider" />
         </receiver>
     </application>
 
