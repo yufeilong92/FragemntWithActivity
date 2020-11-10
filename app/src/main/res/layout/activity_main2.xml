@@ -10,8 +10,29 @@
         android:id="@+id/btn_show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="s22222"
+        android:text="start"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_startOne"
+        android:text="btn_startOne"
+        app:layout_constraintTop_toBottomOf="@id/btn_show"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_endOne"
+        android:text="btn_endOne"
+        app:layout_constraintTop_toBottomOf="@id/btn_startOne"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_endOne" />
 </androidx.constraintlayout.widget.ConstraintLayout>
