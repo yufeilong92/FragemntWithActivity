@@ -23,9 +23,7 @@ class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        val initialize = MMKV.initialize(this)
         val defaultMMKV = MMKV.defaultMMKV()
-        Log.e(mTag,"$initialize")
         mAsyncExecutor =
             AsyncExecutor()
 
